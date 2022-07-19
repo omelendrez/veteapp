@@ -1,0 +1,66 @@
+.main-container {
+  display: flex;
+}
+
+.main-container .customer,
+.main-container .pet {
+  width: 20vw;
+}
+
+.main-container .consultations .consultation .texts {
+  min-height: 50px;
+}
+
+.main-container .consultations .consultation .balance {
+  display: flex;
+  border: 1px solid #ccc;
+  flex-direction: column;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.main-container .consultations .consultation .balance.debt {
+  background-color: greenyellow;
+}
+.main-container .consultations .consultation .balance .amount-row {
+  display: flex;
+}
+
+.main-container .consultations .consultation .balance .amount-row .amount {
+  width: 100%;
+}
+
+.main-container .customer .observations,
+.main-container .pet .observations,
+.main-container .consultation .observations {
+  font-style: italic;
+}
+
+ .main-container .pets {
+  padding: 10px;
+  zoom: 1.5;
+  margin-left: 10vw;
+}
+
+.main-container .consultations .consultations-list {
+  max-height: 84vh;
+}
+
+.main-container .pets .pets-header {
+  font-size: 1.2em;
+  padding-bottom: 6px;
+  font-weight: bold;
+  color: #666;
+}
+
+.main-container .pets .list-group-item {
+  cursor: pointer;
+}
+
+.main-container .pets button {
+  zoom: 0.7;
+}
+
+.main-container .pets .pet {
+  margin-right: 20px;
+}

@@ -1,0 +1,37 @@
+.image {
+  background-image: url(../pets.jpg);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+  background-size: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .image {
+    background-size: auto 384px;
+  }
+}
+
+.image .logo {
+  background-image: url(../logo.jpg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: center;
+  background-size: auto 20%;
+  height: 92vh;
+}
+
+.image .logo h1 {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.programmed-visits {
+  background-color: #fff;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.programmed-visits .header {
+  text-align: center;
+}

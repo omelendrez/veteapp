@@ -1,0 +1,16 @@
+
+.customer .status {
+  font-weight: bold;
+}
+
+.customer .status.active {
+  color: green;
+}
+
+.customer .status.inactive {
+  color: red;
+}
+
+.button-container {
+  max-width: 190px;
+}

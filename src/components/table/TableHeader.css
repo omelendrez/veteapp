@@ -1,0 +1,16 @@
+.table-header {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+@media only screen and (min-width: 600px) {
+  .table-header {
+    justify-content: flex-start;
+  }
+
+  .table-header div {
+    margin-right: 3vw;
+  }
+
+}

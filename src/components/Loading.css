@@ -1,0 +1,11 @@
+.loading img {
+  height: 300px;
+  width: 400px;
+  border: 0;
+}
+
+.loading p {
+  margin-top: -90px;
+  font-weight: bold;
+  color: #888;
+}

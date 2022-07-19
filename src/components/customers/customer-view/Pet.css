@@ -1,0 +1,12 @@
+
+.pet .status {
+  font-weight: bold;
+}
+
+.pet .status.active {
+  color: green;
+}
+
+.pet .status.inactive {
+  color: red;
+}
