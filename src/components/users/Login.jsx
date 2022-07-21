@@ -1,23 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { login } from '../../services/users'
 import { saveUser } from '../../services/utils'
 
-const Login = (props) => {
+const Login = () => {
   const user = {
     email: '',
     password: '',
-    name: '',
   }
   const [form, setForm] = useState(user)
   const [error, setError] = useState('')
+  const [isDisabled, setIsDisabled] = useState(true)
 
   const handleChange = (e) => {
     e.preventDefault()
     setForm({ ...form, [e.target.id]: e.target.value })
   }
 
-  const handlelogin = (e) => {
-    e.preventDefault()
+  const handlelogin = () => {
     setError('')
     login(form)
       .then((user) => {
@@ -25,6 +24,27 @@ const Login = (props) => {
       })
       .catch((err) => setError(err.response.data.error))
   }
+
+  useEffect(() => {
+    const listener = (event) => {
+      if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+        event.preventDefault()
+        document.getElementById('submit-login').click()
+      }
+    }
+    document.addEventListener('keydown', listener)
+    return () => {
+      document.removeEventListener('keydown', listener)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (form.email && form.password) {
+      setIsDisabled(false)
+    } else {
+      setIsDisabled(true)
+    }
+  }, [form])
 
   return (
     <div className='container'>
@@ -65,8 +85,10 @@ const Login = (props) => {
           </form>
           <button
             type='submit'
+            id='submit-login'
             className='btn btn-primary'
             onClick={handlelogin}
+            disabled={isDisabled}
           >
             Login
           </button>
